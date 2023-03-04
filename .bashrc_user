@@ -1,1 +1,19 @@
+# Storing dotfiles according to this https://www.atlassian.com/git/tutorials/dotfiles tutorial.
+# Setting up new dotfiles repo:
+# 	git init --bare $HOME/.cfg
+#	alias config='/usr/bin/git --git-dir=$HOME/.cfg/ --work-tree=$HOME'
+#	config config --local status.showUntrackedFiles no
+#	echo "alias config='/usr/bin/git --git-dir=$HOME/.cfg/ --work-tree=$HOME'" >> $HOME/.bashrc
+# Install dotfiles to new system
+#	alias config='/usr/bin/git --git-dir=$HOME/.cfg/ --work-tree=$HOME'
+#	echo ".cfg" >> .gitignore
+# 	git clone --bare <git-repo-url> $HOME/.cfg
+#	alias config='/usr/bin/git --git-dir=$HOME/.cfg/ --work-tree=$HOME'
+#	config checkout # might fail due to already existing dotfiles
+#	mkdir -p .config-backup && \
+#	config checkout 2>&1 | egrep "\s+\." | awk {'print $1'} | \
+#	xargs -I{} mv {} .config-backup/{}
+#	config checkout
+#	config config --local status.showUntrackedFiles no
+
 alias config='/usr/bin/git --git-dir=/home/wasil/.cfg/ --work-tree=/home/wasil'
