@@ -17,3 +17,5 @@
 #	config config --local status.showUntrackedFiles no
 
 alias config='/usr/bin/git --git-dir=/home/wasil/.cfg/ --work-tree=/home/wasil'
+bind '"\e[A":history-search-backward'
+bind '"\e[B":history-search-forward'
